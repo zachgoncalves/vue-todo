@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navigation />
     <div class="container">
       <Header />
       <AddTodo v-on:add-todo="addTodo" />
@@ -10,15 +11,17 @@
 
 <script>
 import Todos from './components/Todos';
-import Header from './components/layout/Header'
-import AddTodo from './components/AddTodo'
+import Header from './components/layout/Header';
+import AddTodo from './components/AddTodo';
+import Navigation from './components/Navigation';
 
 export default {
   name: 'app',
   components: {
     Todos,
     Header,
-    AddTodo
+    AddTodo,
+    Navigation
   },
 
   data() {
