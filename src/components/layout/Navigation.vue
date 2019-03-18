@@ -16,18 +16,27 @@ export default {
             links: [
                 {
                     name:"Home",
-                    href:"index.html"
+                    href:"/",
+                    View:"/pages/Home.vue"
                 },
                 {
                     name:"About",
-                    href:"about.html"
+                    href:"about",
+                    View:"/pages/About.vue"
                 },
                 {
                     name:"Contact",
-                    href:"contact.html"
+                    href:"contact",
+                    View:"/pages/About.vue"
                 }
             ]
         }
+    },
+    methods: {
+        renderPage(e) {
+            return e(this.View)
+        },
+        render (h) { return h(this.View) }
     }
 }
 </script>
